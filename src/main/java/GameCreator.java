@@ -1,8 +1,6 @@
 import interfaces.IWrite;
 import models.LiveGame;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import utils.ConditionParser;
 import utils.FileWorker;
 
@@ -20,8 +18,6 @@ public class GameCreator {
     }
 
     public LiveGame createGame(String conditionSource) {
-        Logger logger = LoggerFactory.getLogger(GameCreator.class);
-        logger.error("Ты пидор");
         LiveGame liveGame = null;
         try {
             String content = fileWorker.readConditionFile(conditionSource);

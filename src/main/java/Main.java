@@ -19,9 +19,7 @@ public class Main {
         LiveGame liveGame = gameCreator.createGame(CONDITIONS);
 
         if (!(liveGame == null)) {
-            writer.write(liveGame.getGeneration().toString());
             liveGame.play();
-            writer.write(liveGame.getGeneration().toString());
 
             try {
                 fileWorker.writeResultToFile(RESULT,liveGame.getGeneration().toString());
